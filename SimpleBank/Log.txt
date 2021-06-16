@@ -1,0 +1,4 @@
+2021/6/16/16/27/32 : Se ha realizado un prestamo
+2021/6/16/16/27/50 : Se ha realizado una transacción
+2021/6/16/16/27/53 : Se ha realizado un prestamo
+2021/6/16/16/27/55 : Se ha realizado una transacción
