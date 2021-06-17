@@ -12,7 +12,17 @@ public aspect Log {
 		
 		pointcut logTransaction()
 		: call(* Bank.moneyMakeTransaction(..));
+		
+		pointcut logUserCreation()
+		: call(* Bank.createUser(..));
 	
+		
+		after() : logUserCreation(){
+			//Escribimos el registro del prestamo
+			Escritura(timeGet() , ": Se ha creado un usuario");
+			}
+		
+		
 		after() : logTransaction(){
 			//Escribimos el registro del prestamo
 			Escritura(timeGet() , ": Se ha realizado una transacción");
@@ -36,7 +46,7 @@ public aspect Log {
 			int second = now.get(Calendar.SECOND);
 			
 			
-			return year+"/"+month+"/"+day+"/"+hour+"/"+minute+"/"+second;
+			return year+"-"+month+"-"+day+"-"+hour+"-"+minute+"-"+second;
 		}
 	
 		public void Escritura(String date, String info) {
