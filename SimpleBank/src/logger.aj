@@ -26,15 +26,15 @@ public aspect logger {
 	}
 	
 	// POINTCUT 2
-	pointcut successWithdrawal() : call(* moneyWith*(..));
-	after() : successWithdrawal() {
+	pointcut successWithdraw() : call(* moneyWith*(..));
+	after() : successWithdraw() {
 		Date date = new Date();
 		String l = "withdrawal; -> " 
 		+ date.getHours() + "h:"
 		+ date.getMinutes() + "m:"
 		+ date.getSeconds() + "s"
 		+ " - " + date.toString();
-		System.out.println("\n Withdrawal realizada con éxito a las: " +l);
+		System.out.println("\n Withdraw realizada con éxito a las: " +l);
 		FileWriter fich = null;
 		try {
     		fich = new FileWriter("logW.txt",true);
