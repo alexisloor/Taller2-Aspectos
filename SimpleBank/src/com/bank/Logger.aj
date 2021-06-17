@@ -24,6 +24,13 @@ public aspect Logger {
 		Escritura(time, "**** Se ha creado un usuario ****");
 	}
 	
+	// POINTCUT ---> RETIRO/ESCRITURA
+    pointcut successRetiro() : call(* Bank.moneyWithdrawal(..));
+	after() : successRetiro() {
+		String time = timeGet();
+		Escritura(time, "**** Se ha hecho un retiro****");
+	}
+	
 	// POINTCUT ---> TRANSACTION/CONSOLA
     pointcut successTransaction() : call(* Bank.moneyMakeTransaction(..));
     after() : successTransaction(){
@@ -35,7 +42,6 @@ public aspect Logger {
     
     
     // POINTCUT ---> RETIRO/CONSOLA
-    pointcut successRetiro() : call(* Bank.moneyWithdrawal(..));
     after() : successRetiro(){
     	System.out.println("**** Retiro exitoso ****");
     	
