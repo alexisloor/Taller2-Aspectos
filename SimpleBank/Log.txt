@@ -2,3 +2,10 @@
 2021/6/16/16/27/50 : Se ha realizado una transacción
 2021/6/16/16/27/53 : Se ha realizado un prestamo
 2021/6/16/16/27/55 : Se ha realizado una transacción
+2021/6/16/20/9/57 : Se ha realizado un retiro
+2021/6/16/20/11/13 : Se ha realizado una transacción
+2021/6/16/20/17/33 : Se ha realizado una transacción
+2021/6/16/20/19/14 : Se ha realizado un retiro
+2021/6/16/20/32/44 : Se ha realizado un retiro
+2021/6/16/20/34/3 : Se ha realizado un retiro
+2021/6/16/20/38/36 : Se ha realizado un retiro

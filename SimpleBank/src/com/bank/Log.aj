@@ -21,8 +21,8 @@ public aspect Log {
 		
 		
 		after() : logPrestamo(){
-			//Escribimos el registro del prestamo
-			Escritura(timeGet() , ": Se ha realizado un prestamo");
+			//Escribimos el registro del retiro
+			Escritura(timeGet() , ": Se ha realizado un retiro");
 			}
 		
 		
