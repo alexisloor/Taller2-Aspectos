@@ -42,12 +42,12 @@ public class Bank {
         case 2:
             System.out.println("Realizar transaccion");
             System.out.println("------------------------------------");
-             moneyMakeTransaction(); 
+            moneyMakeTransaction(); 
         break;
         case 3:
             System.out.println("Retirar dinero");
             System.out.println("------------------------------------");
-             moneyWithdrawal();
+            moneyWithdrawal();
         break;
         case 4:
             System.out.println("Ver Usuarios");
