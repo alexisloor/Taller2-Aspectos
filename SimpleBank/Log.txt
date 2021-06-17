@@ -1,3 +1,8 @@
 transaction; -> Wed Jun 16 21:58:51 ECT 2021 **** Se ha creado un usuario ****
 transaction; -> Wed Jun 16 22:02:20 ECT 2021 **** Se ha creado un usuario ****
 transaction; -> Wed Jun 16 22:18:15 COT 2021 **** Se ha hecho un retiro****
+transaction; -> Wed Jun 16 22:31:11 ECT 2021 **** Se ha hecho una transacción****
+transaction; -> Wed Jun 16 22:31:54 ECT 2021 **** Se ha hecho un retiro****
+transaction; -> Wed Jun 16 22:35:04 ECT 2021 **** Se ha creado un usuario ****
+transaction; -> Wed Jun 16 22:37:25 ECT 2021 **** Se ha hecho una transacción****
+transaction; -> Wed Jun 16 22:38:27 ECT 2021 **** Se ha hecho un retiro****

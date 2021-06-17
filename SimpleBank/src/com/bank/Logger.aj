@@ -14,7 +14,7 @@ public aspect Logger {
     after() : success() {
     	System.out.println("**** User created ****");
 		String time = timeGet();
-		System.out.println("\nUsuario creado con Ã©xito a las: " + time);
+		System.out.println("\nUsuario creado con éxito a las: " + time);
     }
     
     // POINTCUT ---> USUARIO/ESCRITURA
@@ -31,21 +31,28 @@ public aspect Logger {
 		Escritura(time, "**** Se ha hecho un retiro****");
 	}
 	
+	// POINTCUT ---> RETIRO/CONSOLA
+    after() : successRetiro(){
+    	String time = timeGet();
+    	System.out.println(time+"  **** Retiro exitoso ****");
+    	
+    }
+    
 	// POINTCUT ---> TRANSACTION/CONSOLA
     pointcut successTransaction() : call(* Bank.moneyMakeTransaction(..));
     after() : successTransaction(){
-    	System.out.println("**** TransacciÃ³n exitosa ****");
+    	String time = timeGet();
+    	System.out.println(time+"  **** Transacción exitosa ****");  	
+    }
+    
+    // POINTCUT ---> TRANSACTION/ESCRITURA
+	after() : successTransaction() {
 		String time = timeGet();
-		System.out.println("\nTransacciÃ³n realizada a las: " + time);
-    	
-    }
+		Escritura(time, "**** Se ha hecho una transacción****");
+	}
     
     
-    // POINTCUT ---> RETIRO/CONSOLA
-    after() : successRetiro(){
-    	System.out.println("**** Retiro exitoso ****");
-    	
-    }
+    
     
     
     
